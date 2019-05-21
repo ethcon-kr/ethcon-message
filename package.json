@@ -1,0 +1,29 @@
+{
+  "name": "ethcon-message",
+  "version": "0.1.0",
+  "description": "store simple message for ethboard-dapp",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle-hdwallet-provider-privkey": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethcon-kr/ethcon-message.git"
+  },
+  "keywords": [
+    "ethconkr"
+  ],
+  "author": "jin.s@onther.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethcon-kr/ethcon-message/issues"
+  },
+  "homepage": "https://github.com/ethcon-kr/ethcon-message#readme"
+}

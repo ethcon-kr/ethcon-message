@@ -209,8 +209,7 @@ contract DSMessage is DSThing {
         }
     }
 
-    // this function should be private
-    function setPostManually(uint256 Pos) public note auth{
+    function setPostManually(uint256 Pos) private note auth{
         require(Messages[Pos].has == true);
         indexTobePost = Pos;
     }
@@ -220,23 +219,20 @@ contract DSMessage is DSThing {
     }
 
     // Send Message to ethcon board
-    function poke(bytes32 wut) public note auth {
+    function poke(bytes32 wut) public note {
         Messages.push(Message(false, wut));
     }
 
-    // this function should be private
     // Just confirm lastest message, should be carefully.
-    function lastConfirm() public auth {
+    function lastConfirm() private auth {
         confirm(Messages.length -1);
     }
 
-    // this function should be private
-    function confirm(uint msgNum) public auth {
+    function confirm(uint msgNum) private auth {
         Messages[msgNum].has = true;
     }
 
-    // this function should be private
-    function unconfirm(uint msgNum) public auth {
+    function unconfirm(uint msgNum) private auth {
         Messages[msgNum].has = false;
     }
 
